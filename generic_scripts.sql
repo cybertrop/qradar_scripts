@@ -1,5 +1,7 @@
 /*= Generic Qradar searchs for user activity: ===*/
 
+/*= Geneeral searchs for user activity: ===*/
+
                 select DATEFORMAT(startTime, 'yyyy-MM-dd hh:mm:ss') AS "Time",  QIDDESCRIPTION(qid) as "Event Name",
 eventcount, sourceip, sourceport, destinationip, destinationport, "Application", URLHost, LOGSOURCENAME(logsourceid) as 'Log Source'
 from events where username ILIKE <ADD USERNAME HERE> order by "Time" desc start '2020-11-01 08:00' stop '2020-11-02 11:00'
